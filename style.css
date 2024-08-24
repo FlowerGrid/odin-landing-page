@@ -247,6 +247,14 @@ img {
 }
 
 @media (max-width: 600px) {
+    .header .large-box{
+
+        flex-direction: column;
+        justify-content: center;
+        gap: 14px;
+        align-items: center;
+    }
+
     .header, .footer {
         padding: 4%;
     }
@@ -262,11 +270,11 @@ img {
     }
 
     .p1 {
-        font-size: 18px;
+        font-size: 20px;
     }
 
     .p2 {
-        font-size: 12px;
+        font-size: 16px;
     }
 
     .cb-1 .large-box {
