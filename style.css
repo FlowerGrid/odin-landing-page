@@ -39,6 +39,7 @@ p {
     justify-content: center;
     align-items: center;
     height: 42px;
+    /* height: 75%; */
 }
 
 button {
@@ -53,25 +54,30 @@ button {
 .content-box {
     display: flex;
     /* temporary margin so I can see better */
-    padding: 100px 0;
+    /* padding: 100px 0; */
+    padding: 6% 0;
     justify-content: center;
 }
 
 .large-box {
     /* max-width: 1200px; */
-    width: 1100px;
+    /* width: 1100px; */
+    width: 73%;
     display: flex;
     justify-content: space-between;
     align-items: stretch;
     box-sizing: border-box;
+    flex-wrap: wrap;
 }
 
 .small-box {
-    width: 800px;
+    /* width: 800px; */
+    width: 60%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-sizing: border-box;
+    flex-wrap: wrap;
 }
 
 /* header styles */
@@ -107,12 +113,18 @@ nav a {
 }
 
 .cb-1-content {
-    width: 520px;
+    width: 45%;
+}
+
+.cb-1 .large-box {
+    flex-direction: row-reverse;
 }
 
 .cb-1-content .p2 {
     color: #E5E7EB;
     margin: 0;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .button-1 {
@@ -123,8 +135,8 @@ nav a {
 }
 
 .cb-1-img {
-    background-color: #71747a;
-    width: 520px;
+    /* background-color: #71747a; */
+    width: 45%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -215,7 +227,7 @@ img {
 }
 
 .cta-box {
-    width: 800px;
+    width: 80%;
     display: flex;
     justify-content: space-between;
     padding: 60px 0;
@@ -232,4 +244,57 @@ img {
 .button-2 {
     border-style: solid;
     border-color: #E5E7EB;
+}
+
+@media (max-width: 600px) {
+    .header, .footer {
+        padding: 4%;
+    }
+
+    .large-box, .small-box {
+        /* padding: 4%; */
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-sizing: border-box;
+        /* flex-wrap: wrap; */
+    }
+
+    .p1 {
+        font-size: 18px;
+    }
+
+    .p2 {
+        font-size: 12px;
+    }
+
+    .cb-1 .large-box {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: stretch;
+    }
+
+    .cb-1-content, .cb-1-img {
+        width: 100%;
+    }
+
+    .cb-1-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .cta-box {
+        flex-direction: column;
+        padding: 12% 5%;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .button-2, .button-1 {
+        margin-top: 12%;
+    }
 }
